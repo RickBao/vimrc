@@ -1,0 +1,66 @@
+set helplang=cn  
+set encoding=utf-8  
+"显示标尺
+set ruler
+" 自动语法高亮  
+syntax on  
+" 检测文件类型  
+filetype on  
+" 检测文件类型插件  
+filetype plugin on  
+" 显示行号  
+set number  
+" 上下可视行数  
+set scrolloff=6  
+" 设定 tab 长度为 4  
+set tabstop=4  
+" 设置按BackSpace的时候可以一次删除掉4个空格  
+set softtabstop=4  
+" 设定 << 和 >> 命令移动时的宽度为 4  
+set shiftwidth=4  
+" 不突出显示当前行  
+set nocursorline  
+" 搜索时忽略大小写，但在有一个或以上大写字母时仍大小写敏感  
+set ignorecase  
+set smartcase  
+" 搜索时高亮显示被找到的文本  
+set hlsearch  
+" 关闭错误声音  
+set noerrorbells  
+set novisualbell  
+" 智能自动缩进  
+set smartindent  
+" 设定命令行的行数为 1  
+set cmdheight=1  
+" 显示状态栏 (默认值为 1, 无法显示状态栏)  
+set laststatus=2  
+"显示括号配对情况  
+set showmatch  
+" 设定配色方案  
+colorscheme peachpuff
+" 设置在状态行显示的信息  
+set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)  
+" 在被分割的窗口间显示空白，便于阅读  
+set fillchars=vert:\ ,stl:\ ,stlnc:\  
+		     
+" 高亮显示匹配的括号  
+set showmatch  
+		   
+" 匹配括号高亮的时间（单位是十分之一秒）  
+set matchtime=5  
+					   
+" 选中状态下 Ctrl+c 复制  
+vnoremap <c-c> "+y  
+nmap <silent> <C-v> "+p  
+					     
+" 窗口切换  
+nnoremap <c-h> <c-w>h  
+nnoremap <c-l> <c-w>l  
+nnoremap <c-j> <c-w>j  
+nnoremap <c-k> <c-w>k  
+					   
+" 插入模式下上下左右移动光标  
+inoremap <c-h> <left>  
+inoremap <c-l> <right>  
+inoremap <c-j> <c-o>gj  
+inoremap <c-k> <c-o>gk  
