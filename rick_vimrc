@@ -37,30 +37,35 @@ set laststatus=2
 "显示括号配对情况  
 set showmatch  
 " 设定配色方案  
-colorscheme peachpuff
-" 设置在状态行显示的信息  
-set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)  
-" 在被分割的窗口间显示空白，便于阅读  
-set fillchars=vert:\ ,stl:\ ,stlnc:\  
-		     
+"colorscheme peachpuff
+colorscheme molokai
 " 高亮显示匹配的括号  
 set showmatch  
 		   
 " 匹配括号高亮的时间（单位是十分之一秒）  
 set matchtime=5  
 					   
-" 选中状态下 Ctrl+c 复制  
-vnoremap <c-c> "+y  
-nmap <silent> <C-v> "+p  
-					     
 " 窗口切换  
 nnoremap <c-h> <c-w>h  
 nnoremap <c-l> <c-w>l  
 nnoremap <c-j> <c-w>j  
 nnoremap <c-k> <c-w>k  
-					   
-" 插入模式下上下左右移动光标  
-inoremap <c-h> <left>  
-inoremap <c-l> <right>  
-inoremap <c-j> <c-o>gj  
-inoremap <c-k> <c-o>gk  
+
+"====================
+" Rick Add 
+"====================
+"
+"自动补全
+set wildmenu
+set wildmode=full
+
+"netrw文件管理系统
+set nocompatible
+filetype plugin on
+
+"Disable Up Down Left Right arrow keys
+"Delete this part when usualy use h,j,k,l
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Right> <Nop>
+noremap <Left> <Nop>
