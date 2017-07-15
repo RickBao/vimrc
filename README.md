@@ -7,3 +7,6 @@ colors file: molokai.vim file, The style same as SUBLIME TEXT
 modify your vimrc file, colorscheme`s value equals 'molokai', just one step!
  
 molokai file author: Tomas Restrepo <tomas@winterdom.com>
+
+Add Pathogen Plugin:
+add both autoload and bundle document in .vim, autoload use to install pathogen and boundle use to install other plugin;
