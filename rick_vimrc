@@ -1,13 +1,11 @@
 set helplang=cn  
 set encoding=utf-8  
-"显示标尺
-set ruler
+
+execute pathogen#infect()
 " 自动语法高亮  
 syntax on  
-" 检测文件类型  
-filetype on  
 " 检测文件类型插件  
-filetype plugin on  
+filetype plugin indent on  
 " 显示行号  
 set number  
 " 上下可视行数  
