@@ -1,7 +1,22 @@
 set helplang=cn  
 set encoding=utf-8  
 
-execute pathogen#infect()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim	"For vundle runtime path to include Vundle and initialize
+call vundle#begin()		"Vundle init
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Keep Plugin commands between vundle#begin/end.
+Plugin 'scrooloose/nerdtree'
+
+
+
+
+call vundle#end()		"Vundle end required
+
 " 自动语法高亮  
 syntax on  
 " 检测文件类型插件  
